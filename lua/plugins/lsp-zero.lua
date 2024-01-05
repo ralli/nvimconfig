@@ -17,31 +17,10 @@ return {
 				-- see :help lsp-zero-keybindings
 				-- to learn the available actions
 				lsp_zero.default_keymaps({ buffer = bufnr })
+				lsp_zero.buffer_autoformat()
 			end)
 
 			require('lspconfig').lua_ls.setup(lsp_zero.nvim_lua_ls())
-
-			lsp_zero.format_on_save({
-				format_opts = {
-					async = false,
-					timeout_ms = 10000,
-				},
-				servers = {
-					['lua_ls'] = { 'lua' },
-					['rust_analyzer'] = { 'rust' },
-					['gopls'] = { 'go' },
-					--					['clang-format'] = { 'c', 'cpp' },
-					['efm'] = {
-						"css",
-						"javascript",
-						"javascriptreact",
-						"typescript",
-						"typescriptreact",
-						"json",
-						"scss",
-						"less" },
-				}
-			})
 
 			require('mason').setup({})
 			require('mason-lspconfig').setup({
