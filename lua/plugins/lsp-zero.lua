@@ -51,7 +51,6 @@ return {
 					"bashls",
 					"tsserver",
 					"tailwindcss",
-					"pyright",
 					"html",
 					"cssls",
 					"lua_ls",
