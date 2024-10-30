@@ -3,10 +3,10 @@ return {
 	lazy = false,
 	config = function()
 		require('nvim-treesitter.configs').setup {
-			ensure_installed = { "elixir", "eex", "heex", "erlang" },
+			ensure_installed = { "elixir", "eex", "heex", "erlang", "prisma" },
 
 			highlight = {
-				enable = { "elixir", "eex", "heex" },
+				enable = { "elixir", "eex", "heex", "prisma" },
 				disable = { "lua", "c", "rust" }
 			}
 		}

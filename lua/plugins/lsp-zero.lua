@@ -37,7 +37,7 @@ return {
 		local cmp_action = lsp_zero.cmp_action()
 
 		cmp.setup({
-			formatting = lsp_zero.cmp_format(),
+			-- formatting = lsp_zero.cmp_format(),
 			mapping = cmp.mapping.preset.insert({
 				['<C-y>'] = cmp.mapping.confirm({ select = false }),
 				['<CR>'] = cmp.mapping.confirm({ select = false }),
@@ -55,7 +55,6 @@ return {
 			-- see :help lsp-zero-keybindings
 			-- to learn the available actions
 			lsp_zero.default_keymaps({ buffer = bufnr, preserve_mappings = false })
-			lsp_zero.buffer_autoformat()
 			vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', { buffer = bufnr })
 			vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_definitions<cr>', { buffer = bufnr })
 		end)
