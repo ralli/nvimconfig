@@ -6,6 +6,7 @@ return {
 			javascriptreact = { "prettierd", "prettier", stop_after_first = true },
 			typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 			typescript = { "prettierd", "prettier", stop_after_first = true },
+			python = { "autopep8", "autopep8", stop_after_first = true },
 		},
 		format_on_save = {
 			timeout_ms = 500,
